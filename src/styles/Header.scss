@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  margin-top: 40px;
+
+  &__logo {
+    width: 210px;    
+  }
+
+  &__nav {
+    display: flex;
+    gap: 57px;
+
+    a {
+      color:#000000;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+
+      &.active {
+        text-decoration: underline;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

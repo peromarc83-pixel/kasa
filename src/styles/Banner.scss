@@ -1,0 +1,45 @@
+.banner {
+  position: relative;
+  width: 1240px;
+  height: 223px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.banner-title {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 111px;
+    margin: 16px 0;
+  }
+
+  .banner-title {
+    font-size: 24px;
+  }
+}
