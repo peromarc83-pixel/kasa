@@ -1,0 +1,35 @@
+// ==============================================
+// VARIABLES
+// ==============================================
+
+// --- Couleurs ---
+$color-primary:     #FF6060;
+$color-black:       #000000;
+$color-white:       #ffffff;
+$color-text-dark:   #08060d;
+$color-text-light:  #6b6375;
+$color-bg-light:    #f6f6f6;
+
+// --- Typographie ---
+$font-main:         "Montserrat", sans-serif;
+$font-size-xl:      36px;
+$font-size-lg:      24px;
+$font-size-md:      18px;
+$font-size-sm:      14px;
+$font-size-xs:      12px;
+
+// --- Espacements ---
+$spacing-xl:        50px;
+$spacing-lg:        40px;
+$spacing-md:        30px;
+$spacing-sm:        20px;
+
+// --- Rayons ---
+$radius-sm:         5px;
+$radius-md:         10px;
+$radius-lg:         25px;
+
+// --- Breakpoints ---
+$bp-mobile:         768px;
+$bp-tablet:         1024px;
+$bp-desktop:        1240px;

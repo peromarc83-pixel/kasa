@@ -1,12 +1,11 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1240px;
+  @include flex-between;
+  @include container($padding: 0 $spacing-lg);
+  margin: $spacing-lg auto 0;
   width: 100%;
-  margin: 40px auto 0;
-  padding: 0 40px;
-  box-sizing: border-box;
 
   &__logo {
     width: 210px;
@@ -17,37 +16,30 @@
     gap: 57px;
 
     a {
-     font-family: "Monserrat", sans-serif;
-      color: #000000;
+      font-family: $font-main;
+      color: $color-black;
       text-decoration: none;
-      font-size: 24px;
+      font-size: $font-size-lg;
       font-weight: 500;
       transition: opacity 0.3s ease;
 
-      &.active {
-        text-decoration: underline;
-      }
-
-      &:hover {
-        opacity: 0.8;
-      }
+      &.active { text-decoration: underline; }
+      &:hover  { opacity: 0.8; }
     }
   }
 
-  @media (max-width: 768px) {
-    padding: 0 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  @include mobile {
+    padding: 0 $spacing-sm;
+    margin-top: $spacing-sm;
+    margin-bottom: $spacing-sm;
 
-    &__logo {
-      width: 145px;
-    }
+    &__logo { width: 145px; }
 
     &__nav {
-      gap: 20px;
+      gap: $spacing-sm;
 
       a {
-        font-size: 12px;
+        font-size: $font-size-xs;
         text-transform: uppercase;
       }
     }

@@ -1,41 +1,35 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
 .about-banner {
-  margin-bottom: 40px;
+  margin-bottom: $spacing-lg;
 }
 
 .about-content {
-  max-width: 1240px;
-  margin: 40px auto;
-  padding: 0 20px;
+  @include container($padding: 0 $spacing-sm);
+  margin: $spacing-lg auto;
 
   &__collapses {
-    margin: 50px 0;
+    margin: $spacing-xl 0;
   }
 
   h2 {
     font-size: 32px;
     font-weight: 500;
-    margin-bottom: 20px;
-    color: #08060d;
+    margin-bottom: $spacing-sm;
+    color: $color-text-dark;
   }
 
   p {
-    font-size: 18px;
+    font-size: $font-size-md;
     line-height: 1.6;
-    color: #6b6375;
-    margin-bottom: 20px;
+    color: $color-text-light;
+    margin-bottom: $spacing-sm;
   }
-}
 
-@media (max-width: 768px) {
-  .about-content {
-    margin: 20px auto;
-
-    h2 {
-      font-size: 24px;
-    }
-
-    p {
-      font-size: 14px;
-    }
+  @include mobile {
+    margin: $spacing-sm auto;
+    h2 { font-size: $font-size-lg; }
+    p  { font-size: $font-size-sm; }
   }
 }

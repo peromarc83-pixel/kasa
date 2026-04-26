@@ -1,0 +1,59 @@
+// ==============================================
+// MIXINS
+// ==============================================
+@use 'variables' as *;
+
+// --- Responsive ---
+@mixin mobile {
+  @media (max-width: $bp-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (min-width: #{$bp-mobile + 1px}) and (max-width: $bp-tablet) {
+    @content;
+  }
+}
+
+// --- Flexbox ---
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// --- Positionnement absolu (overlay) ---
+@mixin absolute-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+// --- Conteneur centré avec max-width ---
+@mixin container($max: $bp-desktop, $padding: 0 $spacing-sm) {
+  max-width: $max;
+  margin: 0 auto;
+  padding: $padding;
+  box-sizing: border-box;
+}
