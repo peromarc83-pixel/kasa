@@ -1,0 +1,47 @@
+
+
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 100px 20px;
+
+  &__code {
+   font-family: "Montserrat", sans-serif;
+   font-weight:700;
+   font-size: 288px;
+   color: #FF6060;
+   margin: 0;      
+  }
+
+  &__message {
+    font-family:"Montserrat", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #FF6060;
+    text-align: center;
+    margin: 30px 0 60px;
+  }
+
+  &__link {
+    font-family:"Montserrat", sans-serif;
+    color: #000000;
+    font-size: 18px;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 768px) {
+  .error {
+    &__code {
+      font-size: 96px;
+    }
+
+    &__message {
+      font-size: 18px;
+    }
+  }
+}

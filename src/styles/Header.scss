@@ -2,11 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 100px;
-  margin-top: 40px;
+  max-width: 1240px;
+  width: 100%;
+  margin: 40px auto 0;
+  padding: 0 40px;
+  box-sizing: border-box;
 
   &__logo {
-    width: 210px;    
+    width: 210px;
   }
 
   &__nav {
@@ -14,7 +17,8 @@
     gap: 57px;
 
     a {
-      color:#000000;
+     font-family: "Monserrat", sans-serif;
+      color: #000000;
       text-decoration: none;
       font-size: 24px;
       font-weight: 500;
@@ -26,6 +30,25 @@
 
       &:hover {
         opacity: 0.8;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    &__logo {
+      width: 145px;
+    }
+
+    &__nav {
+      gap: 20px;
+
+      a {
+        font-size: 12px;
+        text-transform: uppercase;
       }
     }
   }
