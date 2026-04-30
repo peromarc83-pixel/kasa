@@ -9,7 +9,7 @@ export default function Logement() {
   const [logement, setLogement] = useState(null)
   const [erreur, setErreur] = useState(false)
 
-  useEffect(() => {
+   useEffect(() => {
     fetch('http://localhost:8080/api/properties/' + id)
       .then((response) => {
         if (!response.ok) {
@@ -20,6 +20,10 @@ export default function Logement() {
       })
       .then((data) => {
         if (data) setLogement(data)
+      })
+      .catch((error) => {
+        console.error('Erreur lors du chargement du logement :', error)
+        setErreur(true)
       })
   }, [id])
 

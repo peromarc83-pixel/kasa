@@ -9,6 +9,7 @@ export default function Home() {
     fetch('http://localhost:8080/api/properties')
       .then((response) => response.json())
       .then((data) => setLogements(data))
+      .catch((error) => console.error('Erreur lors du chargement des logements :', error))
   }, [])
 
   return (
